@@ -35,6 +35,12 @@ RUN wget https://github.com/pachterlab/kallisto/releases/download/v0.42.4/kallis
     mv kallisto_* /teams/DSC180A_FA20_A00/b04genetics/group_4/opioids-od-genome-analysis/opt/ && \
     rm /teams/DSC180A_FA20_A00/b04genetics/group_4/opioids-od-genome-analysis/tmp/kallisto_linux-v0.42.4.tar.gz
 
+# STAR
+RUN wget https://github.com/alexdobin/STAR/archive/2.5.2b.zip -P /tmp && \
+    unzip /tmp/2.5.2b.zip && \
+    mv STAR-* /opt/ && \
+    rm -rf /tmp/*.zip
+    
 # HTSeq
 RUN pip install HTSeq
 
